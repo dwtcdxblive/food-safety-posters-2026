@@ -1,0 +1,9 @@
+* { box-sizing: border-box; }
+html, body, #display { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { background: #000; color: #fff; font-family: Arial, sans-serif; cursor: none; }
+#display { position: relative; display: grid; place-items: center; background: #000; }
+canvas { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0; transition: opacity 700ms ease; }
+canvas.visible { opacity: 1; }
+#status { position: relative; z-index: 3; max-width: 80%; padding: 14px 18px; border-radius: 10px; background: rgba(20, 20, 20, .9); text-align: center; font-size: 18px; transition: opacity 250ms ease; }
+#status.hidden { opacity: 0; pointer-events: none; }
+#status.error { background: #7d1717; }
