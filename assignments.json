@@ -1,0 +1,251 @@
+{
+  "day1": [
+    {
+      "screen": 1,
+      "posters": [
+        {
+          "number": 1,
+          "url": "/assets/d1/1.pdf",
+          "originalName": "P1-1 Asma Alnuaimi Aflatoxins.pdf"
+        },
+        {
+          "number": 2,
+          "url": "/assets/d1/2.pdf",
+          "originalName": "P1-2 Asma Moh_Food Allergen.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 2,
+      "posters": [
+        {
+          "number": 3,
+          "url": "/assets/d1/3.pdf",
+          "originalName": "P1-3 Lina Hamo How Clean are Berries.pdf"
+        },
+        {
+          "number": 4,
+          "url": "/assets/d1/4.pdf",
+          "originalName": "P1-4 Fatima Comparison of Traditional.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 3,
+      "posters": [
+        {
+          "number": 6,
+          "url": "/assets/d1/6.pdf",
+          "originalName": "P1-6 Roudha Smart Agriculture Cultivating.pdf"
+        },
+        {
+          "number": 7,
+          "url": "/assets/d1/7.pdf",
+          "originalName": "P1-7 Mariam al Nuaimi Claims AI Using.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 4,
+      "posters": [
+        {
+          "number": 8,
+          "url": "/assets/d1/8.pdf",
+          "originalName": "P1-8 Maryam Moh Fresh Juice safe choice.pdf"
+        },
+        {
+          "number": 9,
+          "url": "/assets/d1/9.pdf",
+          "originalName": "P1-9 Masada Integration of Automation and Advanced.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 5,
+      "posters": [
+        {
+          "number": 10,
+          "url": "/assets/d1/10.pdf",
+          "originalName": "P1-10 Rania From Chemical Fingerprints.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 6,
+      "posters": [
+        {
+          "number": 12,
+          "url": "/assets/d1/12.pdf",
+          "originalName": "P1-12 Dr.Zeina Daher Meat_Adulteration.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 7,
+      "posters": [
+        {
+          "number": 15,
+          "url": "/assets/d1/15.pdf",
+          "originalName": "P1-15 Maitha Advancing Aquaculture Biosecurity Through.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 8,
+      "posters": [
+        {
+          "number": 16,
+          "url": "/assets/d1/16.pdf",
+          "originalName": "P1-16 Habiba Doc Cross Verifier.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 9,
+      "posters": [
+        {
+          "number": 17,
+          "url": "/assets/d1/17.pdf",
+          "originalName": "P1-17 Akram Osman Microbiological Criteria.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 10,
+      "posters": [
+        {
+          "number": 18,
+          "url": "/assets/d1/18.pdf",
+          "originalName": "P1-18 Fatma Building Intelligent Food Systems.pdf"
+        }
+      ]
+    }
+  ],
+  "day2": [
+    {
+      "screen": 1,
+      "posters": [
+        {
+          "number": 20,
+          "url": "/assets/d2/20.pdf",
+          "originalName": "P2-20 Aaliya Development of Agar-Based.pdf"
+        },
+        {
+          "number": 21,
+          "url": "/assets/d2/21.pdf",
+          "originalName": "P2-21 Dineshkumar Heavy metals contamination.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 2,
+      "posters": [
+        {
+          "number": 22,
+          "url": "/assets/d2/22.pdf",
+          "originalName": "P2-22 Dineshkumar Microbial Quality of Food.pdf"
+        },
+        {
+          "number": 23,
+          "url": "/assets/d2/23.pdf",
+          "originalName": "P2-23 Dineshkumar Quality and safety of cheese shipped.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 3,
+      "posters": [
+        {
+          "number": 24,
+          "url": "/assets/d2/24.pdf",
+          "originalName": "P2-24 Dali Francis Development of Ghaf Seed-Derived.pdf"
+        },
+        {
+          "number": 25,
+          "url": "/assets/d2/25.pdf",
+          "originalName": "P2-25 Dali Francis From Date Seed Waste to Functional.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 4,
+      "posters": [
+        {
+          "number": 26,
+          "url": "/assets/d2/26.pdf",
+          "originalName": "P2-26 Fatima Prevelance of Listeria Mono.pdf"
+        },
+        {
+          "number": 27,
+          "url": "/assets/d2/27.pdf",
+          "originalName": "P2-27 Dr Khalifa A Computational Approach Egg.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 5,
+      "posters": [
+        {
+          "number": 29,
+          "url": "/assets/d2/29.pdf",
+          "originalName": "P2-29 Maryam Assessment of Bromate Levels.pdf"
+        },
+        {
+          "number": 30,
+          "url": "/assets/d2/30.pdf",
+          "originalName": "P2-30 Monica AI and Predictive Analytics.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 6,
+      "posters": [
+        {
+          "number": 31,
+          "url": "/assets/d2/31.pdf",
+          "originalName": "P2-31 Monica Development of a Date Seed-Based.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 7,
+      "posters": [
+        {
+          "number": 32,
+          "url": "/assets/d2/32.pdf",
+          "originalName": "P2-32 Monica Dine-Safe A Predictive AI Framework.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 8,
+      "posters": [
+        {
+          "number": 33,
+          "url": "/assets/d2/33.pdf",
+          "originalName": "P2-33 Monica Screen First, Ferment Later.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 9,
+      "posters": [
+        {
+          "number": 34,
+          "url": "/assets/d2/34.pdf",
+          "originalName": "P2-34 Manal Microplastics in Marine.pdf"
+        }
+      ]
+    },
+    {
+      "screen": 10,
+      "posters": [
+        {
+          "number": 35,
+          "url": "/assets/d2/35.pdf",
+          "originalName": "P2-35 Ayeda Beyond Conventional Honey.pdf"
+        }
+      ]
+    }
+  ]
+}
