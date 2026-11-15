@@ -1,6 +1,6 @@
-import * as pdfjsLib from '/vendor/pdf.mjs';
+import * as pdfjsLib from './vendor/pdf.mjs';
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = '/vendor/pdf.worker.mjs';
+pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdf.worker.mjs', import.meta.url).href;
 
 const { day, screen } = window.TV_CONFIG;
 const requestedPage = Number(new URLSearchParams(window.location.search).get('page')) || null;
@@ -15,15 +15,16 @@ boot().catch(showError);
 
 async function boot() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').catch(() => {});
+    navigator.serviceWorker.register(new URL('./sw.js', import.meta.url)).catch(() => {});
   }
 
-  const assignments = await fetch('/assignments.json', { cache: 'force-cache' }).then(checkResponse).then((response) => response.json());
+  const assignmentsUrl = new URL('./assignments.json', import.meta.url);
+  const assignments = await fetch(assignmentsUrl, { cache: 'force-cache' }).then(checkResponse).then((response) => response.json());
   const assignment = assignments[`day${day}`]?.find((item) => item.screen === screen);
   if (!assignment) throw new Error(`No poster assignment found for Day ${day}, Screen ${screen}.`);
 
   status.textContent = assignment.posters.length === 2 ? 'Loading both posters...' : 'Loading poster...';
-  posters = await Promise.all(assignment.posters.map(loadPoster));
+  posters = await Promise.all(assignment.posters.map((poster) => loadPoster(poster, assignmentsUrl)));
   await renderPoster(0, canvases[0]);
   canvases[0].classList.add('visible');
   status.classList.add('hidden');
@@ -39,15 +40,15 @@ async function boot() {
   });
 }
 
-async function loadPoster(poster) {
-  const response = await fetch(poster.url, { cache: 'force-cache' }).then(checkResponse);
+async function loadPoster(poster, baseUrl) {
+  const response = await fetch(new URL(poster.url, baseUrl), { cache: 'force-cache' }).then(checkResponse);
   const data = await response.arrayBuffer();
   const loadingTask = pdfjsLib.getDocument({
     data,
-    cMapUrl: '/vendor/cmaps/',
+    cMapUrl: new URL('./vendor/cmaps/', import.meta.url).href,
     cMapPacked: true,
-    standardFontDataUrl: '/vendor/standard_fonts/',
-    wasmUrl: '/vendor/wasm/',
+    standardFontDataUrl: new URL('./vendor/standard_fonts/', import.meta.url).href,
+    wasmUrl: new URL('./vendor/wasm/', import.meta.url).href,
   });
   const document = await loadingTask.promise;
   const page = await document.getPage(requestedPage ? Math.min(Math.max(1, requestedPage), document.numPages) : document.numPages);

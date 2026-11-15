@@ -1,5 +1,5 @@
 const CACHE = 'food-safety-displays-v1';
-const CORE = ['/tv.js', '/tv.css', '/assignments.json', '/vendor/pdf.mjs', '/vendor/pdf.worker.mjs'];
+const CORE = ['./tv.js', './tv.css', './assignments.json', './vendor/pdf.mjs', './vendor/pdf.worker.mjs'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(CORE)).then(() => self.skipWaiting()));

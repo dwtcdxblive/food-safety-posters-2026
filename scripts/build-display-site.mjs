@@ -59,7 +59,7 @@ for (const [dayNumber, config] of Object.entries(days)) {
   const assetDir = path.join(dist, 'assets', `d${dayNumber}`);
   fs.mkdirSync(assetDir, { recursive: true });
   for (const poster of pdfs) {
-    poster.url = `/assets/d${dayNumber}/${poster.number}.pdf`;
+    poster.url = `assets/d${dayNumber}/${poster.number}.pdf`;
     fs.writeFileSync(path.join(assetDir, `${poster.number}.pdf`), poster.entry.getData());
   }
 
@@ -109,7 +109,7 @@ function screenHtml(day, screen) {
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta name="theme-color" content="#000000">
   <title>Day ${day} - Screen ${screen}</title>
-  <link rel="stylesheet" href="/tv.css">
+  <link rel="stylesheet" href="../../tv.css">
 </head>
 <body>
   <main id="display" aria-live="polite">
@@ -118,7 +118,7 @@ function screenHtml(day, screen) {
     <div id="status">Loading posters...</div>
   </main>
   <script>window.TV_CONFIG=${config}</script>
-  <script type="module" src="/tv.js"></script>
+  <script type="module" src="../../tv.js"></script>
 </body>
 </html>`;
 }
@@ -127,11 +127,11 @@ function directoryHtml(data) {
   const daySections = [1, 2].map((day) => {
     const links = data[`day${day}`].map((item) => {
       const posterNumbers = item.posters.map((poster) => `P${day}-${poster.number}`).join(' / ');
-      return `<a href="/d${day}/${item.screen}/"><strong>Screen ${item.screen}</strong><span>${posterNumbers}</span></a>`;
+      return `<a href="d${day}/${item.screen}/"><strong>Screen ${item.screen}</strong><span>${posterNumbers}</span></a>`;
     }).join('');
     return `<section><h2>Day ${day}</h2><div class="grid">${links}</div></section>`;
   }).join('');
-  const kioskLinks = [...kioskSlugs].map(([name, slug]) => `<a href="/kiosk/${slug}/"><strong>${name.replace(' - kiosk.html', '')}</strong><span>Unmodified HTML</span></a>`).join('');
+  const kioskLinks = [...kioskSlugs].map(([name, slug]) => `<a href="kiosk/${slug}/"><strong>${name.replace(' - kiosk.html', '')}</strong><span>Unmodified HTML</span></a>`).join('');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Food Safety Screens</title><style>
   :root{font-family:Inter,system-ui,sans-serif;color:#f5f7f6;background:#0b1713}body{max-width:1100px;margin:auto;padding:36px 22px 70px}h1{font-size:clamp(2rem,5vw,4.5rem);margin:0 0 8px}p{color:#9fb8af;margin:0 0 44px}section{margin-top:40px}h2{color:#79e7b6}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}a{display:flex;flex-direction:column;gap:7px;padding:18px;border:1px solid #29443a;border-radius:14px;background:#13251f;color:#fff;text-decoration:none}a:hover{border-color:#79e7b6;transform:translateY(-1px)}span{font-size:.86rem;color:#9fb8af}
   </style></head><body><h1>Food Safety Screens</h1><p>Direct links for every TV and kiosk.</p>${daySections}<section><h2>Kiosks</h2><div class="grid">${kioskLinks}</div></section></body></html>`;
